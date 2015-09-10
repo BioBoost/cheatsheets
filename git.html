@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="cheatsheet.css">
+</head>
+<body>
+  <div class="header">
+    <img src="git_logo.png" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+      <section>
+        <h1>Help</h1>
+        <div class="entry">
+          <div class="text">
+            Find help on a command
+          </div>
+          <pre class="code">$ git &lt;command&gt; --help</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Basics</h1>
+        <div class="entry">
+          <div class="text">
+            <ul>
+              <li><strong>master</strong> default development branch</li>
+              <li><strong>origin</strong> default upstream repository</li>
+              <li><strong>.config</strong> stored in homedir</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Create Repositories</h1>
+        <div class="entry">
+          <div class="text">
+            Clone an existing repository
+          </div>
+          <pre class="code">$ git clone ssh://user@domain.com/repo.git</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create a new local repo
+          </div>
+          <pre class="code">$ git init</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Local Changes</h1>
+        <div class="entry">
+          <div class="text">
+            Status of files in your working directory
+          </div>
+          <pre class="code">$ git status</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            View all changes to tracked files
+          </div>
+          <pre class="code">$ git diff</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            View changes to certain file
+          </div>
+          <pre class="code">$ git diff &lt;filename&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Add all changes to staging area
+          </div>
+          <pre class="code">$ git add .</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Add certain changes to staging area (hit ? for help)
+          </div>
+          <pre class="code">$ git add -p &lt;file&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Commit staged changes
+          </div>
+          <pre class="code">$ git commit</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Commit all changes (tracked files only)
+          </div>
+          <pre class="code">$ git commit -a</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Commit staged changes with message
+          </div>
+          <pre class="code">$ git commit -m &quot;message&quot;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Change last commit (never do this when already pushed)
+          </div>
+          <pre class="code">$ git commit --amend</pre>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- SECOND column -->
+    <div class="column">
+
+      <section>
+        <h1>Branches</h1>
+        <div class="entry">
+          <div class="text">
+            List existing branches
+          </div>
+          <pre class="code">$ git branch -av</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create new branch based on current HEAD
+          </div>
+          <pre class="code">$ git branch &lt;new_branch&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Switch HEAD to branch
+          </div>
+          <pre class="code">$ git checkout &lt;branch&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create new branch based on HEAD and checkout
+          </div>
+          <pre class="code">$ git checkout -b &lt;new_branch&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create new tracking branch based on remote branch
+          </div>
+          <pre class="code">$ git checkout --track &lt;remote/branch&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Delete local branch
+          </div>
+          <pre class="code">$ git branch -d &lt;branch&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create new branch from commit and checkout
+          </div>
+          <pre class="code">$ git checkout -b &lt;branch&gt; &lt;commit_id&gt;</pre>
+        </div>
+      </section>
+
+
+      <section>
+        <h1>Tags</h1>
+
+        <div class="entry">
+          <div class="text">
+            List existing tags
+          </div>
+          <pre class="code">$ git tag -l</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Mark current commit with tag
+          </div>
+          <pre class="code">$ git tag &lt;tagname&gt;</pre>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
+
+      <section>
+        <h1>Remotes</h1>
+
+        <div class="entry">
+          <div class="text">
+            List configured remotes
+          </div>
+          <pre class="code">$ git remote -v</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Show info about remote
+          </div>
+          <pre class="code">$ git remote show &lt;remote&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Change remote url
+          </div>
+          <pre class="code">$ git remote set-url &lt;remote&gt; &lt;url&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Add new remote
+          </div>
+          <pre class="code">$ git add remote &lt;name&gt; &lt;url&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Download changes from remote, but don&rsquo;t integrate into HEAD
+          </div>
+          <pre class="code">$ git fetch &lt;remote&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Download changes from remote and integrate into HEAD
+          </div>
+          <pre class="code">$ git pull &lt;remote&gt; &lt;branch&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Publish local changes to remote
+          </div>
+          <pre class="code">$ git push &lt;remote&gt; &lt;branch&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Publish tags
+          </div>
+          <pre class="code">$ git push --tags</pre>
+        </div>
+
+      </section>
+
+
+      <section>
+        <h1>Patches</h1>
+
+        <div class="entry">
+          <div class="text">
+            Create path for other developers (extract commits which are in current branch but not in origin)
+          </div>
+          <pre class="code">$ git format-patch origin</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Apply a given patch
+          </div>
+          <pre class="code">$ git am -3 &lt;patchfile&gt;</pre>
+        </div>
+
+      </section>
+
+
+      <section>
+        <h1>Hacks</h1>
+
+        <div class="entry">
+          <div class="text">
+            Nicer log format
+          </div>
+          <pre class="code">git config --global alias.lg &quot;log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --date=relative&quot;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Config ssh host
+          </div>
+          <pre class="code">Host gitlab
+  User git
+  Hostname git.labict.be
+  Port 22
+  IdentityFile ~/.ssh/id_rsa</pre>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    
+  </div>
+
+
+  <div class="header">
+    <img src="git_logo.png" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+      <section>
+        <h1>Commit Related Changes</h1>
+        <div class="entry">
+          <div class="text">
+            A commit should be a wrapper for related changes. For example, fixing two different bugs should produce two separate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong. With tools like the staging area and the ability to stage only parts of a file, Git makes it easy to create very granular commits.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Commit Often</h1>
+        <div class="entry">
+          <div class="text">
+            Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it‘s easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in contrast, makes it hard to solve conflicts.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Dont Commit Half-done Work</h1>
+        <div class="entry">
+          <div class="text">
+            Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it‘s easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in contrast, makes it hard to solve conflicts.
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- SECOND column -->
+    <div class="column">
+
+      <section>
+        <h1>Test Code Before You Commit</h1>
+        <div class="entry">
+          <div class="text">
+            Resist the temptation to commit something that you &quot;think&quot; is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half-baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Write Good Commit Messages</h1>
+        <div class="entry">
+          <div class="text">
+            Begin your message with a short summary of your changes (up to 50 characters as a guideline). Separate it from the following body by including a blank line. The body of your message should provide detailed answers to the following questions: ›  What was the motivation for the change? ›  How does it differ from the previous implementation? Use the imperative, present tense («change», not «changed» or «changes») to be consistent with generated messages from commands like git merge.
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
+
+      <section>
+        <h1>Version Control is Not a Backup System</h1>
+        <div class="entry">
+          <div class="text">
+            Having your files backed up on a remote server is a nice side effect of having a version control system. But you should not use your VCS like it was a backup system. When doing version control, you should pay attention to committing semantically (see related changes) - you shouldn't just cram in files.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Use Branches</h1>
+        <div class="entry">
+          <div class="text">
+            Branching is one of Git&lsquo;s most powerful features - and this is not by accident: quick and easy branching was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas&hellip; 
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Agree on a Workflow</h1>
+        <div class="entry">
+          <div class="text">
+            Git lets you pick from a lot of different work - flows: long-running branches, topic branches, merge or rebase, git-flow&hellip; Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most importantly) on your and your teammates&lsquo; personal preferences. However you choose to work, just make sure to agree on a common workflow that everyone follows.
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    
+  </div>
+
+
+</body>
+</html>
