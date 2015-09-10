@@ -73,7 +73,22 @@ ul, li {
   list-style-type: none;
 }
 
-.header { clear: both;}
+@media screen {
+  div.footer {
+    display: none;
+  }
+}
+
 @media print {
-  .footer { page-break-after: always; }
+  div.footer {
+    position: fixed;
+    bottom: 0;
+    background: #E31D1A;
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    font-size: 75%;
+    color: white;
+  }
+  
+  .sheet { page-break-after: always; }
 }
