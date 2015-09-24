@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="cheatsheet.css">
+</head>
+<body>
+  <div class="header">
+    <img src="linux_logo.jpg" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+      <section>
+        <h1>Help</h1>
+        <div class="entry">
+          <div class="text">
+            Find help on a command
+          </div>
+          <pre class="code">$ man &lt;command&gt;</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>VirtualBox Key Combinations</h1>
+        <div class="entry">
+          <div class="text">
+            Switch to and from full-screen
+          </div>
+          <pre class="code">RCTRL + f</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Linux Key Combinations</h1>
+        <div class="entry">
+          <div class="text">
+            Launch a terminal
+          </div>
+          <pre class="code">CTRL + ALT + t</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Lock session
+          </div>
+          <pre class="code">CTRL + ALT + l</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Switch Desktop Workspace
+          </div>
+          <pre class="code">ALT + Fx</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Switch TTY
+          </div>
+          <pre class="code">RCTRL + Fx</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Move running process to background
+          </div>
+          <pre class="code">CTRL + z</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Relative Paths</h1>
+        <div class="entry">
+          <div class="text">
+            <ul>
+              <li><strong>.</strong> current dir</li>
+              <li><strong>..</strong> parent dir</li>
+              <li><strong>~</strong> your home dir</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Exploring and Traversing the File System</h1>
+        <div class="entry">
+          <div class="text">
+            Show current working dir
+          </div>
+          <pre class="code">$ pwd</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            List directory content
+          </div>
+          <pre class="code">$ ls</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            List directory content and hidden files (long format)
+          </div>
+          <pre class="code">$ ls -al</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Change the current working dir
+          </div>
+          <pre class="code">$ cd &lt;path&gt;</pre>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- SECOND column -->
+    <div class="column">
+
+      <section>
+        <h1>File types</h1>
+        <div class="entry">
+          <div class="text">
+            <ul>
+              <li><strong>-</strong> regular file</li>
+              <li><strong>d</strong> directory (a file of a specific format that lists other files)</li>
+              <li><strong>l</strong> a hard or soft link (basically a shortcut to another file)</li>
+              <li><strong>c</strong> a character device file</li>
+              <li><strong>b</strong> a block device file</li>
+              <li><strong>p</strong> a pipe file</li>
+              <li><strong>s</strong> a socket file</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Manipulating the File System</h1>
+        <div class="entry">
+          <div class="text">
+            Output file content
+          </div>
+          <pre class="code">$ cat &lt;file&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create a new file
+          </div>
+          <pre class="code">$ touch &lt;file&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Create a new directory
+          </div>
+          <pre class="code">$ mkdir &lt;dir&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Remove file
+          </div>
+          <pre class="code">$ rm &lt;file&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Remove directory (recursive) and its content
+          </div>
+          <pre class="code">$ rm -r &lt;dir&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Move a file or a directory
+          </div>
+          <pre class="code">$ mv &lt;dir/file&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Copy file
+          </div>
+          <pre class="code">$ cp &lt;src_file&gt; &lt;dest_file&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Copy directory (recursive) and its content
+          </div>
+          <pre class="code">$ cp -r &lt;src_dir&gt; &lt;dest_dir&gt;</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Tags</h1>
+
+        <div class="entry">
+          <div class="text">
+            List existing tags
+          </div>
+          <pre class="code">$ git tag -l</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Mark current commit with tag
+          </div>
+          <pre class="code">$ git tag &lt;tagname&gt;</pre>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
+
+      <section>
+        <h1>Filemode</h1>
+
+        <div class="entry">
+          <div class="image">
+            <img src="linux_filemode.png">
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h1>File Ownership</h1>
+
+        <div class="entry">
+          <div class="text">
+            Change owner of file or dir (add -R for recursive)
+          </div>
+          <pre class="code">$ chown &lt;user&gt; &lt;file&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Change group of file or dir (add -R for recursive)
+          </div>
+          <pre class="code">$ chown :&lt;group&gt; &lt;file&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Change owner and group of file or dir (add -R for recursive)
+          </div>
+          <pre class="code">$ chown &lt;user&gt;:&lt;group&gt; &lt;file&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Change permissions of file or dir (permissions can be octal or symbolic)
+          </div>
+          <pre class="code">$ chmod &lt;permissions&gt; &lt;file&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Symbolic permissions examples
+          </div>
+          <pre class="code">g-rwx</pre>
+          <pre class="code">g+rx</pre>
+          <pre class="code">u+x,g+x-z</pre>
+          <pre class="code">u+x,g+x-w,o-rwx</pre>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>http://labict.be</li>
+      <li>http://hackers.labict.be</li>
+    </ul>
+  </div>
+
+
+</body>
+</html>
