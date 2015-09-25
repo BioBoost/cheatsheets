@@ -185,31 +185,6 @@
       </section>
 
       <section>
-        <h1>Tags</h1>
-
-        <div class="entry">
-          <div class="text">
-            List existing tags
-          </div>
-          <pre class="code">$ git tag -l</pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Mark current commit with tag
-          </div>
-          <pre class="code">$ git tag &lt;tagname&gt;</pre>
-        </div>
-
-      </section>
-
-    </div>
-
-
-    <!-- THIRD column -->
-    <div class="column">
-
-      <section>
         <h1>Filemode</h1>
 
         <div class="entry">
@@ -219,6 +194,12 @@
         </div>
 
       </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
 
       <section>
         <h1>File Ownership</h1>
@@ -259,6 +240,60 @@
           <pre class="code">g+rx</pre>
           <pre class="code">u+x,g+x-z</pre>
           <pre class="code">u+x,g+x-w,o-rwx</pre>
+        </div>
+
+      </section>
+
+      <section>
+        <h1>Package Management</h1>
+
+        <div class="entry">
+          <div class="text">
+            Update package list
+          </div>
+          <pre class="code">apt-get update</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Install package
+          </div>
+          <pre class="code">apt-get install &lt;package&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Remove package
+          </div>
+          <pre class="code">apt-get remove &lt;package&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Remove package including config files
+          </div>
+          <pre class="code">apt-get --purge remove &lt;package&gt;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Upgrade all packages (without installing extra packages or removing packages)
+          </div>
+          <pre class="code">apt-get upgrade</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Upgrade all packages (install extra packages or remove packages)
+          </div>
+          <pre class="code">apt-get dist-upgrade</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Search for a package
+          </div>
+          <pre class="code">aptitude search &lt;searchterm&gt;</pre>
         </div>
 
       </section>
