@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CheatSheet - GIT Workflow</title>
+  <link rel="stylesheet" type="text/css" href="cheatsheet.css">
+</head>
+<body>
+  <div class="header">
+    <img src="git_logo.png" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+      <section>
+        <h1>General</h1>
+        <div class="entry">
+          <div class="text">
+            Central repository as communication hub.
+          </div>
+          <div class="text">
+            Two history branches. Master and develop.
+          </div>
+          <div class="text">
+            Master branch stores official release history.
+          </div>
+          <div class="text">
+            Develop branch stores new features.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Creating a develop branch</h1>
+        <div class="entry">
+          <div class="text">
+            Develop branch contains newest features
+          </div>
+          <pre class="code">git checkout -b develop master</pre>
+          <pre class="code">git push origin develop</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>Implementing new features</h1>
+        <div class="entry">
+          <div class="text">
+            Each new feature resides in own branch.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Feature branches are branched of develop.
+          </div>
+          <pre class="code">git pull origin develop</pre>
+          <pre class="code">git checkout -b &lt;new_feature&gt; develop</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Once finished they get merged into develop and pushed upstream.
+          </div>
+          <pre class="code">git checkout develop</pre>
+          <pre class="code">git pull origin develop</pre>
+          <pre class="code">git merge &lt;new_feature&gt;</pre>
+          <pre class="code">git push origin develop</pre>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SECOND column -->
+    <div class="column">
+
+      <section>
+        <h1>Releasing</h1>
+        <div class="entry">
+          <div class="text">
+            A release branch is forked of develop. No new features can be added to the release branch only bux fixes, docs and release oriented tasks.
+          </div>
+          <pre class="code">git checkout -b &lt;release_version&gt; develop</pre>
+          <pre class="code">git push origin &lt;release_version&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Once ready to ship the release branch is merged into master and develop (update develop with possible bug fixes and docs).
+          </div>
+          <pre class="code">git checkout master</pre>
+          <pre class="code">git merge &lt;release_version&gt;</pre>
+          <pre class="code">git push origin master</pre>
+          <pre class="code">git checkout develop</pre>
+          <pre class="code">git merge &lt;release_version&gt;</pre>
+          <pre class="code">git push origin develop</pre>
+          <pre class="code">git push origin &lt;release_version&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Tag the release in master
+          </div>
+          <pre class="code">git tag -a &lt;version_number&gt; -m &lt;description_of_release&gt; master</pre>
+          <pre class="code">git push --tags</pre>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- THIRD column -->
+    <div class="column">
+
+      <section>
+        <h1>Fixing Bugs</h1>
+        <div class="entry">
+          <div class="text">
+            Create a maintenance branch of master
+          </div>
+          <pre class="code">git checkout master</pre>
+          <pre class="code">git pull origin master</pre>
+          <pre class="code">git checkout -b &lt;issue-#issue_number&gt; master</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Once the bug is fixed it is merged into master and pushed upstream
+          </div>
+          <pre class="code">git checkout master</pre>
+          <pre class="code">git merge &lt;issue-#issue_number&gt;</pre>
+          <pre class="code">git push origin master</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Master should be tagged with new release number
+          </div>
+          <pre class="code">git tag -a &lt;version_number&gt; -m &lt;description_of_release&gt; master</pre>
+          <pre class="code">git push --tags</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            The bug fix should also be included into develop
+          </div>
+          <pre class="code">git pull origin develop</pre>
+          <pre class="code">git checkout develop</pre>
+          <pre class="code">git merge &lt;issue-#issue_number&gt;</pre>
+          <pre class="code">git push origin develop</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            The bug fix should also be merged into the release branch
+          </div>
+          <pre class="code">git pull origin &lt;release_version&gt;</pre>
+          <pre class="code">git checkout &lt;release_version&gt;</pre>
+          <pre class="code">git merge &lt;issue-#issue_number&gt;</pre>
+          <pre class="code">git push origin &lt;release_version&gt;</pre>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Feel free to delete the branch at this point
+          </div>
+          <pre class="code">git branch -d &lt;issue-#issue_number&gt;</pre>
+        </div>
+      </section>
+
+      <section>
+        <h1>An overview</h1>
+
+        <div class="entry">
+          <div class="image">
+            <img src="git_workflow_release.jpg">
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>http://labict.be</li>
+      <li>http://hackers.labict.be</li>
+    </ul>
+  </div>
+
+</body>
+</html>
