@@ -82,6 +82,11 @@ ul, li {
   list-style-type: none;
 }
 
+.text ul, .text li {
+  margin-left: 3px;
+  list-style-type: circle;
+}
+
 @media screen {
   div.footer {
     display: none;
