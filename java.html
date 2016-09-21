@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="cheatsheet.css">
+</head>
+<body>
+  <div class="header">
+    <img src="java_logo.jpg" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+
+      <section>
+        <h1>Basics</h1>
+
+        <div class="entry">
+          <div class="text">
+            Application Entry Point
+          </div>
+          <pre class="code">
+public static void main(String[] args) {
+    // TODO code application logic here
+}         </pre>
+        </div>
+
+      </section>
+
+
+      <section>
+        <h1>Primitive Types</h1>
+
+        <div class="entry">
+          <div class="text">
+            <strong>byte</strong> (8 bits) [+127 to -128]<br>
+          </div>
+          <pre class="code">byte frameStart = 65;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>char</strong> (16 bits) [All Unicode characters]<br>
+          </div>
+          <pre class="code">char startOfAlfabet = 'a';</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>short</strong> (16 bits) [+32,767 to -32,768]<br>
+          </div>
+          <pre class="code">short numberOfPagesInBook = 132;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>integer</strong> (32 bits) [+2,147,483,647 to -2,147,483,648]<br>
+          </div>
+          <pre class="code">int framesReceived = 83000;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>long</strong> (64 bits) [+9,223,372,036,854,775,807 to -9,223,372,036,854,775,808]<br>
+          </div>
+          <pre class="code">long numberOfDatabaseRecords = 2870L;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>float</strong> (32 bits) [3.402,823,5 E+38 to 1.4 E-45]<br>
+          </div>
+          <pre class="code">float pi = 3.1415f;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>double</strong> (64 bits) [1.797,693,134,862,315,7 E+308 to 4.9 E-324]<br>
+          </div>
+          <pre class="code">double areaOfCircle = 12.015897;</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>boolean</strong> (1 bit) [false, true]<br>
+          </div>
+          <pre class="code">boolean success = true;</pre>
+        </div>
+
+      </section>
+
+      <section>
+        <h1>Terminal</h1>
+
+        <div class="entry">
+          <div class="text">
+            Output to terminal
+          </div>
+          <pre class="code">System.out.println("Hello World");</pre>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- SECOND column -->
+    <div class="column">
+
+      <section>
+        <h1>Class Basics</h1>
+
+        <div class="entry">
+          <div class="text">
+            Defining a Class
+          </div>
+          <pre class="code">
+&lt;access_modifier&gt; class &lt;name_of_class&gt; {
+    // IMPLEMENTATION
+}         </pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Defining a method
+          </div>
+          <pre class="code">
+&lt;access_modifier&gt; &lt;return_type&gt; &lt;name&gt;(&lt;actual_arguments&gt;) {
+    // Do some processing
+    return &lt;value&gt;;
+}         </pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Actual Argument List
+          </div>
+          <pre class="code">(&lt;argument_name|literal&gt;, &lt;argument_name|literal&gt;, ...)</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Return Types
+          </div>
+          <div class="text no_code">
+            <ul>
+              <li><strong>integer: </strong> byte, char, short, int, long</li>
+              <li><strong>floating-point: </strong> float, double</li>
+              <li><strong>logical: </strong> boolean</li>
+              <li><strong>no return value: </strong> void</li>
+              <li><strong>an object: </strong> any class name, ex.: String</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Calling a method
+          </div>
+          <pre class="code">&lt;object_instance&gt;.&lt;method_name&gt;(&lt;formal_arguments&gt;);</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Formal Argument List
+          </div>
+          <pre class="code">(&lt;type&gt; &lt;argument_name&gt;, &lt;type&gt; &lt;argument_name&gt;, ...)</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Access modifiers
+          </div>
+          <div class="text no_code">
+            <ul>
+              <li><strong>private: </strong> no access except inside class itself</li>
+              <li><strong>protected: </strong> no access except inside class and subclass</li>
+              <li><strong>default (package): </strong> ....</li>
+              <li><strong>public: </strong> access from everywhere</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>http://labict.be</li>
+      <li>http://hackers.labict.be</li>
+    </ul>
+  </div>
+
+
+  <div class="header">
+    <img src="java_logo.jpg" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+      <section>
+        <h1>Clean code</h1>
+        <div class="entry">
+          <div class="text">
+            Don't make a mess of your code. Take care of structure, whitespace, indentation, ...
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Code should read like a good story. It should be easy to understand while wanting you to keep reading.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Naming things</h1>
+        <div class="entry">
+          <div class="text">
+            Name your classes, objects, attributes, methods, variables, programs, ... as you would name your children, with great care.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Never invent synonyms for things that are actually the same. This is considered bad practice and will not lead to good software.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Comments</h1>
+        <div class="entry">
+          <div class="text">
+            While comments can sometimes be useful they can also be dangerous. As implementation changes, comments do not always follow these changes.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            If you take care of your code you should almost never need comments to explain what the code is doing.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Comments can however be useful to explain certain design decisions or thoughts behind an idea.
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Comments can also be used to add TODO's to your code. For example code that should be refactored but you currently don't have the time for.
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>
