@@ -14,7 +14,6 @@
     <!-- FIRST column -->
     <div class="column">
 
-
       <section>
         <h1>Basics</h1>
 
@@ -30,6 +29,140 @@ public static void main(String[] args) {
 
       </section>
 
+      <section>
+        <h1>Naming Conventions</h1>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Class name</strong>
+          </div>
+          <div class="text no_code">
+            Should be CamelCase and start with uppercase letter and be a noun e.g. String, Color, Button, System, Thread etc.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Interface name</strong>
+          </div>
+          <div class="text no_code">
+            Should be CamelCase and start with uppercase letter and be an adjective e.g. Runnable, Remote, ActionListener etc.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Method name</strong>
+          </div>
+          <div class="text no_code">
+            Should be CamelCase and start with lowercase letter and be a verb e.g. actionPerformed(), main(), print(), println() etc.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Variable name</strong>
+          </div>
+          <div class="text no_code">
+            Should be CamelCase and start with lowercase letter e.g. firstName, orderNumber etc.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Package name</strong>
+          </div>
+          <div class="text no_code">
+            Should be in lowercase letter e.g. java, lang, sql, util etc.
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            <strong>Constants name</strong>
+          </div>
+          <div class="text no_code">
+            Should be in uppercase letter. e.g. RED, YELLOW, MAX_PRIORITY etc.
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h1>Terminal</h1>
+
+        <div class="entry">
+          <div class="text">
+            Output to terminal
+          </div>
+          <pre class="code">System.out.println("Hello World");</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Input from terminal
+          </div>
+          <pre class="code">Scanner console = new Scanner(System.in);
+console.next();        // String
+console.nextInt();     // Integer
+console.nextDouble();  // Double</pre>
+        </div>
+
+      </section>
+
+      <section>
+        <h1>Clean code</h1>
+        <div class="entry">
+          <div class="text">
+            Don't make a mess of your code. Take care of structure, whitespace, indentation, ...
+          </div>
+        </div>
+        <div class="entry">
+          <div class="text">
+            Code should read like a good story. It should be easy to understand while wanting you to keep reading.
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- SECOND column -->
+    <div class="column">
+
+    <section>
+      <h1>Operators</h1>
+
+      <div class="entry">
+        <div class="text">
+          Conditional operators
+        </div>
+        <div class="text no_code">
+          <ul>
+            <li><strong>AND: </strong> &amp;&amp;</li>
+            <li><strong>OR: </strong> ||</li>
+            <li><strong>NOT: </strong> !</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="text">
+          Comparison operators
+        </div>
+        <div class="text no_code">
+          <ul>
+            <li><strong>equal to: </strong> ==</li>
+            <li><strong>not equal to: </strong> !=</li>
+            <li><strong>greater than: </strong> &gt;</li>
+            <li><strong>greater than or equal to: </strong> &gt;=</li>
+            <li><strong>less than: </strong> &lt;</li>
+            <li><strong>less than or equal to: </strong> &lt;=</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
 
       <section>
         <h1>Primitive Types</h1>
@@ -93,140 +226,6 @@ public static void main(String[] args) {
       </section>
 
       <section>
-        <h1>Terminal</h1>
-
-        <div class="entry">
-          <div class="text">
-            Output to terminal
-          </div>
-          <pre class="code">System.out.println("Hello World");</pre>
-        </div>
-
-      </section>
-
-    </div>
-
-
-    <!-- SECOND column -->
-    <div class="column">
-
-      <section>
-        <h1>Class Basics</h1>
-
-        <div class="entry">
-          <div class="text">
-            Defining a Class
-          </div>
-          <pre class="code">
-&lt;access_modifier&gt; class &lt;name_of_class&gt; {
-    // IMPLEMENTATION
-}         </pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Defining a method
-          </div>
-          <pre class="code">
-&lt;access_modifier&gt; &lt;return_type&gt; &lt;name&gt;(&lt;actual_arguments&gt;) {
-    // Do some processing
-    return &lt;value&gt;;
-}         </pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Actual Argument List
-          </div>
-          <pre class="code">(&lt;argument_name|literal&gt;, &lt;argument_name|literal&gt;, ...)</pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Return Types
-          </div>
-          <div class="text no_code">
-            <ul>
-              <li><strong>integer: </strong> byte, char, short, int, long</li>
-              <li><strong>floating-point: </strong> float, double</li>
-              <li><strong>logical: </strong> boolean</li>
-              <li><strong>no return value: </strong> void</li>
-              <li><strong>an object: </strong> any class name, ex.: String</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Calling a method
-          </div>
-          <pre class="code">&lt;object_instance&gt;.&lt;method_name&gt;(&lt;formal_arguments&gt;);</pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Formal Argument List
-          </div>
-          <pre class="code">(&lt;type&gt; &lt;argument_name&gt;, &lt;type&gt; &lt;argument_name&gt;, ...)</pre>
-        </div>
-
-        <div class="entry">
-          <div class="text">
-            Access modifiers
-          </div>
-          <div class="text no_code">
-            <ul>
-              <li><strong>private: </strong> no access except inside class itself</li>
-              <li><strong>protected: </strong> no access except inside class and subclass</li>
-              <li><strong>default (package): </strong> ....</li>
-              <li><strong>public: </strong> access from everywhere</li>
-            </ul>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-
-
-    <!-- THIRD column -->
-    <div class="column">
-
-    </div>
-  </div>
-
-  <div class="footer">
-    <ul>
-      <li>http://labict.be</li>
-      <li>http://hackers.labict.be</li>
-    </ul>
-  </div>
-
-
-  <div class="header">
-    <img src="java_logo.jpg" height="60px">
-  </div>
-
-  <div class="sheet">
-
-    <!-- FIRST column -->
-    <div class="column">
-
-      <section>
-        <h1>Clean code</h1>
-        <div class="entry">
-          <div class="text">
-            Don't make a mess of your code. Take care of structure, whitespace, indentation, ...
-          </div>
-        </div>
-        <div class="entry">
-          <div class="text">
-            Code should read like a good story. It should be easy to understand while wanting you to keep reading.
-          </div>
-        </div>
-      </section>
-
-      <section>
         <h1>Naming things</h1>
         <div class="entry">
           <div class="text">
@@ -238,6 +237,63 @@ public static void main(String[] args) {
             Never invent synonyms for things that are actually the same. This is considered bad practice and will not lead to good software.
           </div>
         </div>
+      </section>
+
+    </div>
+
+
+    <!-- THIRD column -->
+    <div class="column">
+
+      <section>
+        <h1>Control flow</h1>
+
+        <div class="entry">
+          <div class="text">
+            Execute code based on conditions using if-else statements.
+          </div>
+          <pre class="code">
+if (&lt;condition&gt;) {
+  // Code if condition is true
+} else if (&lt;other_condition&gt;) {
+  // Code if other_condition is true
+} else {
+  // If none of conditions above are true
+}</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            A while loop is used when the number of iterations is not known
+            beforehand. Based on the condition the while might not be executed at all.
+          </div>
+          <pre class="code">
+while (&lt;condition&gt;) {
+  // Code block
+}</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            A do-while loop is used when the number of iterations is not known
+            beforehand. Contrary to the while loop, the do-while is executed at least once.
+          </div>
+          <pre class="code">
+do {
+  // Code block
+} while (&lt;condition&gt;);</pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            A for-loop is used when the number of iterations is known beforehand.
+          </div>
+          <pre class="code">
+for (&lt;initialization&gt; ; &lt;condition&gt; ; &lt;increment&gt;) {
+  // Code block
+}</pre>
+        </div>
+
       </section>
 
       <section>
@@ -260,6 +316,124 @@ public static void main(String[] args) {
         <div class="entry">
           <div class="text">
             Comments can also be used to add TODO's to your code. For example code that should be refactored but you currently don't have the time for.
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>http://labict.be</li>
+      <li>http://hackers.labict.be</li>
+    </ul>
+  </div>
+
+
+  <div class="header">
+    <img src="java_logo.jpg" height="60px">
+  </div>
+
+  <div class="sheet">
+
+    <!-- FIRST column -->
+    <div class="column">
+
+    <section>
+      <h1>Class Basics</h1>
+
+      <div class="entry">
+        <div class="text">
+          Defining a class
+        </div>
+        <pre class="code">
+&lt;access_modifier&gt; class &lt;name_of_class&gt; {
+  // IMPLEMENTATION
+}         </pre>
+      </div>
+
+      <div class="entry">
+        <div class="text">
+          Defining a method
+        </div>
+        <pre class="code">
+&lt;access_modifier&gt; &lt;return_type&gt; &lt;name&gt;(&lt;actual_arguments&gt;) {
+  // Do some processing
+  return &lt;value&gt;;
+}         </pre>
+      </div>
+
+      <div class="entry">
+        <div class="text">
+          Return Types
+        </div>
+        <div class="text no_code">
+          <ul>
+            <li><strong>Primitive-types: </strong> byte, char, short, int, long, float, double, boolean</li>
+            <li><strong>No return value: </strong> void</li>
+            <li><strong>Reference to object: </strong> any class name, ex.: String</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="text" >
+          Calling a method
+        </div>
+        <pre class="code">&lt;object_instance&gt;.&lt;method_name&gt;(&lt;formal_arguments&gt;);</pre>
+      </div>
+
+      <div class="entry">
+        <div class="text">
+          Access modifiers
+        </div>
+        <div class="text no_code">
+          <ul>
+            <li><strong>private: </strong> no access except inside class itself</li>
+            <li><strong>protected: </strong> no access except inside class and subclass</li>
+            <li><strong>default (package): </strong> ....</li>
+            <li><strong>public: </strong> access from everywhere</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+      <section>
+        <h1>Composition</h1>
+
+        <div class="entry">
+          <div class="text">
+            Class contains instance variable (attribute) of other class
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Has-a relationship
+          </div>
+        </div>
+
+      </section>
+
+    <section>
+      <h1>Inheritance</h1>
+
+        <div class="entry">
+          <div class="text">
+            Subclass inherits from superclass
+          </div>
+          <pre class="code">
+&lt;access_modifier&gt; class &lt;name_of_class&gt; extends &lt;superclass&gt; {
+  // IMPLEMENTATION
+}         </pre>
+        </div>
+
+        <div class="entry">
+          <div class="text">
+            Is-a relationship
           </div>
         </div>
 
